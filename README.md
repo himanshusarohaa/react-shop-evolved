@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# Welcome to your project
 
 ## Project info
 
-**URL**: [https://lovable.dev/projects/e17aa9c5-1dfe-48de-949a-15f208454c90](https://reactionprojectsummer.netlify.app/)
+**URL**: (https://reactionprojectsummer.netlify.app/)
 
 ## How can I edit this code?
 
