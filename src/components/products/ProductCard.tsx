@@ -1,6 +1,7 @@
 import { Star, ShoppingCart, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: string;
@@ -21,6 +22,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, onAddToCart, onToggleWishlist }: ProductCardProps) => {
+  const navigate = useNavigate();
   const discountPercentage = product.originalPrice 
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
@@ -69,12 +71,12 @@ const ProductCard = ({ product, onAddToCart, onToggleWishlist }: ProductCardProp
       </div>
 
       {/* Product Info */}
-      <div className="p-4">
+      <div className="p-4 cursor-pointer" onClick={() => navigate(`/products/${product.id}`)}>
         <div className="mb-2">
           <Badge variant="secondary" className="text-xs mb-2">
             {product.category}
           </Badge>
-          <h3 className="text-lg font-semibold text-card-foreground line-clamp-2 mb-2">
+          <h3 className="text-lg font-semibold text-card-foreground line-clamp-2 mb-2 hover:text-primary transition-colors">
             {product.name}
           </h3>
         </div>

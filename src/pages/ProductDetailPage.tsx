@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import Header from "@/components/layout/Header";
+import ProductDetailEnhanced from "@/components/products/ProductDetailEnhanced";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -345,6 +346,14 @@ const ProductDetailPage = () => {
               </Badge>
             )}
           </div>
+        </div>
+        
+        {/* Enhanced Product Details with Tabs */}
+        <div className="mt-8 col-span-2">
+          <ProductDetailEnhanced 
+            productId={product.id} 
+            productName={product.name}
+          />
         </div>
       </main>
     </div>

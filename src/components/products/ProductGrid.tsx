@@ -21,11 +21,11 @@ interface ProductGridProps {
   maxItems?: number;
 }
 
-// Sample product data
+// Enhanced sample product data with detailed descriptions
 const sampleProducts: Product[] = [
   {
     id: "1",
-    name: "Premium Wireless Laptop - 16inch Display",
+    name: "MacBook Pro 16-inch - M3 Max Chip, 1TB SSD",
     price: 1299.99,
     originalPrice: 1599.99,
     image: productLaptop,
@@ -36,7 +36,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: "2",
-    name: "Professional Wireless Headphones",
+    name: "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
     price: 299.99,
     originalPrice: 399.99,
     image: productHeadphones,
@@ -47,7 +47,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: "3",
-    name: "Latest Smartphone - 256GB",
+    name: "iPhone 15 Pro Max - 256GB Titanium",
     price: 899.99,
     image: productPhone,
     rating: 4.9,
@@ -57,7 +57,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: "4",
-    name: "Gaming Laptop Pro - RTX 4080",
+    name: "ASUS ROG Strix G16 Gaming Laptop - RTX 4080",
     price: 2199.99,
     originalPrice: 2499.99,
     image: productLaptop,
@@ -68,7 +68,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: "5",
-    name: "Studio Monitor Headphones",
+    name: "Audio-Technica ATH-M50x Professional Studio Monitor Headphones",
     price: 449.99,
     image: productHeadphones,
     rating: 4.5,
@@ -78,7 +78,7 @@ const sampleProducts: Product[] = [
   },
   {
     id: "6",
-    name: "Flagship Phone - 512GB Pro",
+    name: "Samsung Galaxy S24 Ultra - 512GB Phantom Black",
     price: 1199.99,
     originalPrice: 1299.99,
     image: productPhone,
@@ -86,6 +86,27 @@ const sampleProducts: Product[] = [
     reviewCount: 298,
     category: "Mobile",
     isOnSale: true,
+  },
+  {
+    id: "7",
+    name: "Dell XPS 13 Plus - Intel i7, 32GB RAM, 1TB SSD",
+    price: 1599.99,
+    originalPrice: 1899.99,
+    image: productLaptop,
+    rating: 4.6,
+    reviewCount: 156,
+    category: "Electronics",
+    isOnSale: true,
+  },
+  {
+    id: "8",
+    name: "Bose QuietComfort 45 Wireless Bluetooth Headphones",
+    price: 329.99,
+    image: productHeadphones,
+    rating: 4.4,
+    reviewCount: 278,
+    category: "Audio",
+    isOnSale: false,
   },
 ];
 

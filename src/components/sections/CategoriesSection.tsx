@@ -1,5 +1,6 @@
 import { Laptop, Headphones, Smartphone, Gamepad2, Camera, Watch } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const categories = [
   {
@@ -41,6 +42,8 @@ const categories = [
 ];
 
 const CategoriesSection = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="py-16 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,6 +61,7 @@ const CategoriesSection = () => {
               variant="outline"
               className="group h-auto p-6 flex flex-col items-center space-y-3 border-2 hover:border-primary hover:shadow-medium transition-all duration-300 animate-fade-in bg-gradient-card hover:scale-105"
               style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => navigate('/products')}
             >
               <div className={`p-4 rounded-full bg-gradient-to-r ${category.color} text-white group-hover:scale-110 transition-transform duration-300`}>
                 <category.icon className="h-8 w-8" />

@@ -1,8 +1,11 @@
 import { ArrowRight, ShoppingBag, Zap, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   const features = [
     {
       icon: ShoppingBag,
@@ -55,6 +58,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent-light text-accent-foreground shadow-glow transition-all duration-300 hover:scale-105"
+                onClick={() => navigate('/products')}
               >
                 Shop Now
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -64,6 +68,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+                onClick={() => navigate('/products')}
               >
                 Explore Categories
               </Button>
